@@ -1,9 +1,21 @@
 import React from 'react';
-import Root from './src/native/index';
-import configureStore from './src/store/index';
+import { StyleSheet, Text, View } from 'react-native';
 
-const { persistor, store } = configureStore();
-
-export default function App() {
-  return <Root store={store} persistor={persistor} />;
+export default class App extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Hamper</Text>
+      </View>
+    );
+  }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
